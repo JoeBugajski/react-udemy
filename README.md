@@ -12,11 +12,13 @@ Project files for udemy react course
 
 4.[Props and State](#propsAndState)
 
-### <a name='componentLearningCard'></a> Component Overview Image
+5.[Event Listeners](#eventListeners)
+
+## <a name='componentLearningCard'></a> Component Overview Image
 
 ![Component Learning Card](/react-complete-guide/assets/components.png)
 
-### <a name='jsxCheatSheet'></a> JSX Cheat Sheet
+## <a name='jsxCheatSheet'></a> JSX Cheat Sheet
 
 Components are the core building block of React apps. Actually, React really is just a library for creating components in its core.
 A typical React app therefore could be depicted as a component tree - having one root component ("App") and then an potentially infinite amount of nested child components.
@@ -41,15 +43,15 @@ When creating components, you have the choice between two different ways:
 
 We'll of course dive into the difference throughout this course, you can already note that you should use 1) as often as possible though. It's the best-practice.
 
-### <a name='propsLearningCard'></a> Props Overview Image
+## <a name='propsLearningCard'></a> Props Overview Image
 
 ![Props Learning Card](/react-complete-guide/assets/props.png)
 
-### <a name='propsAndState'></a> Props and State
+## <a name='propsAndState'></a> Props and State
 
 Props and state are CORE concepts of React. Actually, only changes in props and/ or state trigger React to rerender your components and potentially update the DOM in the browser (a detailed look at how React checks whether to really touch the real DOM is provided in section 6).
 
-#### Props
+### Props
 
 Props allow you to pass data from a parent (wrapping) component to a child (embedded) component.
 Example:
@@ -78,7 +80,7 @@ The Post component receives the props argument. You can of course name this argu
 
 {props.title} then dynamically outputs the title property of the props object - which is available since we set the title property inside AllPosts component (see above).
 
-#### State
+### State
 
 Whilst props allow you to pass data down the component tree (and hence trigger an UI update), state is used to change the component, well, state from within. Changes to state also trigger an UI update.
 Example:
@@ -90,7 +92,7 @@ NewPost Component:
           counter: 1
           };
 
-          render () { 
+          render () {
             // Needs to be implemented in   class-based components! Needs to return some JSX!
             return (
               <div>{this.state.counter}</div>
@@ -101,3 +103,195 @@ NewPost Component:
 Here, the NewPost component contains state . Only class-based components can define and use state . You can of course pass the state down to functional components, but these then can't directly edit it. State simply is a property of the component class, you have to call it state though - the name is not optional. You can then access it via this.state in your class JSX code (which you return in the required render()  method).
 
 Whenever state changes, the component will re-render and reflect the new state. The difference to props is, that this happens within one and the same component - you don't receive new data (props) from outside!
+
+## <a name='eventListeners'></a> Event Listeners
+
+### Events React Can Listen For
+
+In the last lecture, we saw that you can react to the onClick event - but to which other events can you listen? You can find a list of supported events here: https://reactjs.org/docs/events.html#supported-events
+
+#### Clipboard Events
+
+##### Event names
+
+        onCopy onCut onPaste
+
+#### Properties
+
+        DOMDataTransfer clipboardData
+
+#### Composition Events
+
+##### Event names
+
+        onCompositionEnd onCompositionStart onCompositionUpdate
+
+##### Properties
+
+        string data
+
+#### Keyboard Events
+
+##### Event names
+
+        onKeyDown onKeyPress onKeyUp
+
+##### Properties
+
+        boolean altKey
+        number charCode
+        boolean ctrlKey
+        boolean getModifierState(key)
+        string key
+        number keyCode
+        string locale
+        number location
+        boolean metaKey
+        boolean repeat
+        boolean shiftKey
+        number which
+#### Focus Events
+
+##### Event names
+
+        onFocus onBlur
+
+These focus events work on all elements in the React DOM, not just form elements.
+
+##### Properties
+
+        DOMEventTarget relatedTarget
+
+#### Form Events
+
+##### Event names
+
+        onChange
+        onInput
+        onInvalid
+        onSubmit
+
+For more information about the onChange event, see Forms.
+
+#### Mouse Events
+
+##### Event names
+
+        onClick onContextMenu onDoubleClick onDrag
+        onDragEnd onDragEnter onDragExit
+        onDragLeave onDragOver onDragStart onDrop
+        onMouseDown onMouseEnter onMouseLeave
+        onMouseMove onMouseOut onMouseOver onMouseUp
+
+The onMouseEnter and onMouseLeave events propagate from the element being left to the one being entered instead of ordinary bubbling and do not have a capture phase.
+
+##### Properties
+
+        boolean altKey
+        number button
+        number buttons
+        number clientX
+        number clientY
+        boolean ctrlKey
+        boolean getModifierState(key)
+        boolean metaKey
+        number pageX
+        number pageY
+        DOMEventTarget relatedTarget
+        number screenX
+        number screenY
+        boolean shiftKey
+
+#### Selection Events
+
+##### Event names
+
+        onSelect
+
+#### Touch Events
+
+##### Event names
+
+        onTouchCancel onTouchEnd onTouchMove onTouchStart
+
+##### Properties
+
+        boolean altKey
+        DOMTouchList changedTouches
+        boolean ctrlKey
+        boolean getModifierState(key)
+        boolean metaKey
+        boolean shiftKey
+        DOMTouchList targetTouches
+        DOMTouchList touches
+
+#### UI Events
+
+##### Event names
+
+        onScroll
+
+##### Properties
+
+        number detail
+        DOMAbstractView view
+
+#### Wheel Events
+
+##### Event names
+
+        onWheel
+
+##### Properties
+
+        number deltaMode
+        number deltaX
+        number deltaY
+        number deltaZ
+
+#### Media Events
+
+##### Event names
+
+        onAbort onCanPlay onCanPlayThrough onDurationChange
+        onEmptied onEncrypted onEnded onError onLoadedData
+        onLoadedMetadata onLoadStart onPause onPlay
+        onPlaying onProgress onRateChange onSeeked
+        onSeeking onStalled onSuspend onTimeUpdate
+        onVolumeChange onWaiting
+
+#### Image Events
+
+##### Event names
+
+        onLoad onError
+
+#### Animation Events
+
+##### Event names
+
+        onAnimationStart onAnimationEnd onAnimationIteration
+
+##### Properties
+
+        string animationName
+        string pseudoElement
+        float elapsedTime
+
+#### Transition Events
+
+##### Event names
+
+        onTransitionEnd
+
+##### Properties
+
+        string propertyName
+        string pseudoElement
+        float elapsedTime
+
+#### Other Events
+
+##### Event names
+
+        onToggle
