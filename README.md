@@ -122,21 +122,21 @@ In the last lecture, we saw that you can react to the onClick event - but to whi
 
 #### Composition Events
 
-##### Event names
+-Event names
 
         onCompositionEnd onCompositionStart onCompositionUpdate
 
-##### Properties
+-Properties
 
         string data
 
 #### Keyboard Events
 
-##### Event names
+-Event names
 
         onKeyDown onKeyPress onKeyUp
 
-##### Properties
+-Properties
 
         boolean altKey
         number charCode
@@ -152,19 +152,19 @@ In the last lecture, we saw that you can react to the onClick event - but to whi
         number which
 #### Focus Events
 
-##### Event names
+-Event names
 
         onFocus onBlur
 
 These focus events work on all elements in the React DOM, not just form elements.
 
-##### Properties
+-Properties
 
         DOMEventTarget relatedTarget
 
 #### Form Events
 
-##### Event names
+-Event names
 
         onChange
         onInput
@@ -175,7 +175,7 @@ For more information about the onChange event, see Forms.
 
 #### Mouse Events
 
-##### Event names
+-Event names
 
         onClick onContextMenu onDoubleClick onDrag
         onDragEnd onDragEnter onDragExit
@@ -185,7 +185,7 @@ For more information about the onChange event, see Forms.
 
 The onMouseEnter and onMouseLeave events propagate from the element being left to the one being entered instead of ordinary bubbling and do not have a capture phase.
 
-##### Properties
+-Properties
 
         boolean altKey
         number button
@@ -204,17 +204,17 @@ The onMouseEnter and onMouseLeave events propagate from the element being left t
 
 #### Selection Events
 
-##### Event names
+-Event names
 
         onSelect
 
 #### Touch Events
 
-##### Event names
+-Event names
 
         onTouchCancel onTouchEnd onTouchMove onTouchStart
 
-##### Properties
+-Properties
 
         boolean altKey
         DOMTouchList changedTouches
@@ -227,22 +227,22 @@ The onMouseEnter and onMouseLeave events propagate from the element being left t
 
 #### UI Events
 
-##### Event names
+-Event names
 
         onScroll
 
-##### Properties
+-Properties
 
         number detail
         DOMAbstractView view
 
 #### Wheel Events
 
-##### Event names
+-Event names
 
         onWheel
 
-##### Properties
+-Properties
 
         number deltaMode
         number deltaX
@@ -251,7 +251,7 @@ The onMouseEnter and onMouseLeave events propagate from the element being left t
 
 #### Media Events
 
-##### Event names
+-Event names
 
         onAbort onCanPlay onCanPlayThrough onDurationChange
         onEmptied onEncrypted onEnded onError onLoadedData
@@ -262,17 +262,17 @@ The onMouseEnter and onMouseLeave events propagate from the element being left t
 
 #### Image Events
 
-##### Event names
+-Event names
 
         onLoad onError
 
 #### Animation Events
 
-##### Event names
+-Event names
 
         onAnimationStart onAnimationEnd onAnimationIteration
 
-##### Properties
+-Properties
 
         string animationName
         string pseudoElement
@@ -280,11 +280,11 @@ The onMouseEnter and onMouseLeave events propagate from the element being left t
 
 #### Transition Events
 
-##### Event names
+-Event names
 
         onTransitionEnd
 
-##### Properties
+-Properties
 
         string propertyName
         string pseudoElement
@@ -292,6 +292,6 @@ The onMouseEnter and onMouseLeave events propagate from the element being left t
 
 #### Other Events
 
-##### Event names
+-Event names
 
         onToggle
