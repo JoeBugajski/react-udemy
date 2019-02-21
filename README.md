@@ -112,11 +112,11 @@ In the last lecture, we saw that you can react to the onClick event - but to whi
 
 #### Clipboard Events
 
-##### Event names
+-Event names
 
         onCopy onCut onPaste
 
-#### Properties
+-Properties
 
         DOMDataTransfer clipboardData
 
