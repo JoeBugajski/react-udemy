@@ -14,6 +14,8 @@ Project files for udemy react course
 
 5.[Event Listeners](#eventListeners)
 
+6.[Routing and Single Page Applications(SPA)](#routing)
+
 ## <a name='componentLearningCard'></a> Component Overview Image
 
 ![Component Learning Card](/react-complete-guide/assets/components.png)
@@ -295,3 +297,7 @@ The onMouseEnter and onMouseLeave events propagate from the element being left t
 -Event names
 
         onToggle
+
+## <a name='routing'></a> Routing and Single Page Applications
+
+![Routing and Single Page Applications](./react-complete-guide/assets/Routing.png)
