@@ -16,6 +16,8 @@ Project files for udemy react course
 
 6.[Routing and Single Page Applications(SPA)](#routing)
 
+7.[Redux](#redux)
+
 ## <a name='componentLearningCard'></a> Component Overview Image
 
 ![Component Learning Card](/react-complete-guide/assets/components.png)
@@ -301,3 +303,7 @@ The onMouseEnter and onMouseLeave events propagate from the element being left t
 ## <a name='routing'></a> Routing and Single Page Applications
 
 ![Routing and Single Page Applications](./react-complete-guide/assets/Routing.png)
+
+## <a name='redux'></a> Redux
+
+![Redux](./react-complete-guide/assets/redux.png)
